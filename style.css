@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary-color)!important;
+}
+
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+
+/*variable definend*/
+:root{
+    --primary-color: #fb1d1d;
+    --secondary-color: #6c757d;
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+}
+
+/*custom scroll bar*/
+::-webkit-scrollbar {
+    width: 0.3125rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e63636;
+}
+
+/*custom css desing*/
+
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+h2{
+    font-size: 1.5625rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    color: var(--white-color);
+    line-height: 2.5rem;
+}
+
+h4{
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 0.9375rem;
+    text-transform: capitalize;
+    color: var(--white-color);
+    transition: all 0.3s linear;
+}
+
+h5{
+    font-size: 4.875rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: var(--white-color);
+}
+
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: var(--white-color);
+    letter-spacing: 0.0625rem;
+    opacity: 0.8;   
+}   
+
+.main-btn{
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.125rem;
+    display: inline-block;
+    color: var(--white-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 30px;
+    position: relative;
+}
+
+.main-btn::after,
+.main-btn::before{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    left: 0;
+    content: '';
+    transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+}
+
+.main-btn::after{
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+}
+
+.main-btn:hover::after{
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    background-color:#e63636;
+}
+.main-btn:hover::before{
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+    background-color:#e63636;
+}
+
+.main-btn:hover{
+    color:#e63636!important;
+}
+
+.wrapper{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--secondary-color);
+}
+
+.text-content{
+    width: 60%;
+    margin: auto;
+}
+
+/*header desing*/
+
+.top-header{
+    background-color: var(--secondary-color);
+}
+
+.top-header span{
+    font-size: 0.875rem;
+    color: var(--white-color);
+    letter-spacing: 0.1062rem;
+}
+
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left:0;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    -webkit-transition:all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item{
+    padding: 0 0.5rem;
+    transition: all 200ms linear;
+}
+
+.navbar-toggler:focus{
+    outline: unset;
+    border:none;
+    box-shadow: none;
+}
+.navigation-wrap .nav-link{
+    padding-top: 0.9375rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-color);
+    letter-spacing: 0.0625rem;;
+}
+
+.navigtion-wrap .nav-link:hover ,
+.navigation-wrap .nav-link.active{
+    color:#e63636
+}
+
+.navigation-wrap .scroll-on{
+    position: fixed;
+    background-color: var(--black-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem 1 rgb(0,0,0,0.09);
+    transition: all 0.15s ease-in-out 0s;
+}
+
+.navigation-wrap .scroll-on .nav-link:hover,
+.navigation-wrap .scroll-on .nav-link.active{
+    color:#e63636
+}
+
+/* top banner*/
+
+#home .carousel-caption{
+    top:12rem;
+}
+
+#home .carousel-caption p{
+    max-width: 36.25rem;
+    margin: 1.0625rem auto;
+}
+
+/*new arrival*/
+
+.new-arrival .banner-info{
+    bottom: 30px;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    padding: 0 15px;
+}
+
+.new-arrival .card-banner:nth-child(2) h2,
+.new-arrival .card-banner:nth-child(2) p,
+.new-arrival .card-banner:nth-child(2) a{
+    color: var(--black-color);
+}
+
+.new-arrival .card-banner:nth-child(2) a::before,
+.new-arrival .card-banner:nth-child(2) a::after{
+    background-color: var(--black-color);
+}
+
+.new-arrival .card-banner .card-thumb,
+.new-arrival .item-products{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.new-arrival .card-banner .card-thumb img,
+.products .item-product img{
+    transition: all 0.5s ease-out 0s;
+}
+
+
+/*product section desing*/
+
+.products .wrapper{
+    background-color: var(--black-color);
+}
+
+.products .nav-tab{
+    border: 0;
+    justify-content: center;
+}
+
+.products .nav-tab .nav-link{
+     display: block;
+     padding: 0 30px;
+     border: 1px solid;
+     border-radius: 20px;
+     background-color: var(--black-color);
+     color: var(--white-color);
+     height: 36px;
+     margin: 10px;
+     line-height: 34px;
+     text-transform: uppercase;
+}
+
+.products .product-info .cat-parent,
+.products .product-info .wishlist i{
+    font-size: 0.875rem;
+    color: var(--white-color);
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+.products .product-title a{
+    margin: 0 0 7px;
+    display: block;
+    color: var(--white-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.products .rating i{
+    color: gold;
+}
+.basket a i{
+    color: var(--white-color);
+}
+
+/*choose desing section*/
+
+.deal-of-the-day{
+    background-image: url("image/bg3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*blog section*/
+.blog-section{
+    background-color: var(--black-color);
+}
+/*footer*/
+.footer{
+    background-color: var(--secondary-color);
+}
+.footer .footer-social a i{
+    font-size: 1.5rem;
+    color: var(--white-color);
+    padding: 0 1rem;
+}
+.footer .footer-social a:hover i{
+    color:#e63636;
+}
